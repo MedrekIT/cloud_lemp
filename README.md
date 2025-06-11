@@ -7,6 +7,7 @@ LEMP stack - XAMPP-like server application that supports running programs writte
 ## Table of Contents
 
 - [Screenshots](#screenshots)
+- [Short info](#information)
 - [Installation](#installation)
 - [Usage](#usage)
 
@@ -29,6 +30,12 @@ LEMP stack - XAMPP-like server application that supports running programs writte
 ![Stopping container](./screenshots/stop.png)
 
 ---
+
+## Information
+
+- MySQL and PHP are on the backend network because they only communicate with each other (PHP connects to MySQL)
+- Nginx acts as the frontend and needs access to PHP (backend) as well as to be exposed to the outside world
+- phpMyAdmin must connect to MySQL (therefore, it needs access to the backend network) and also be accessible from a browser (so it needs the frontend network)
 
 ## Installation
 
@@ -55,8 +62,8 @@ docker compose up -d
 ```
 
 *Test*
-- [index](localhost:4001)
-- [phpMyAdmin](localhost:6001)
+- [index](http://localhost:4001)
+- [phpMyAdmin](http://localhost:6001)
 
 *Stop*
 ```bash
