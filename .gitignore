@@ -1,0 +1,5 @@
+.DS_Store
+.env
+db_password.txt
+db_root_password.txt
+integration_project/
