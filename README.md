@@ -1,6 +1,6 @@
 # A Docker Compose container created for the twelfth laboratory in cloud computing programming.
 
-LEMP stack - XAMPP-like server application that supports running programs written in PHP and working with MySQL databases.
+LEMP - web stack created for solutions written in PHP that support the SQL database
 
 ---
 
