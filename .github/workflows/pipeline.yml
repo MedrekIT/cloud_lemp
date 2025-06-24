@@ -13,6 +13,13 @@ jobs:
       - 
         name: Check out the source repository
         uses: actions/checkout@v4
+
+      -
+        name: Create files from secrets
+        run: |
+          echo "${{ secrets.ENV_FILE }}" > .env
+          echo "${{ secrets.DB_PWD }}" > db_password.txt
+          echo "${{ secrets.ROOT_PWD }}" > db_root_password.txt
       
       -
         name: Set up Docker Compose
