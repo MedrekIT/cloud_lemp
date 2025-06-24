@@ -2,6 +2,8 @@
 
 LEMP - web stack created for solutions written in PHP that support the MySQL database
 
+![CI Status](https://github.com/MedrekIT/lemp_stack/actions/workflows/pipeline.yml/badge.svg)
+
 ---
 
 ## Table of Contents
