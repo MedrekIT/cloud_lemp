@@ -1,6 +1,6 @@
-# A Docker Compose container created for the twelfth laboratory in cloud computing programming.
+# A Docker Compose container created for building LEMP web stack from scratch
 
-LEMP - web stack created for solutions written in PHP that support the SQL database
+LEMP - web stack created for solutions written in PHP that support the MySQL database
 
 ---
 
@@ -8,6 +8,7 @@ LEMP - web stack created for solutions written in PHP that support the SQL datab
 
 - [Screenshots](#screenshots)
 - [Short info](#information)
+- [Information](#information)
 - [Installation](#installation)
 - [Usage](#usage)
 
@@ -32,6 +33,13 @@ LEMP - web stack created for solutions written in PHP that support the SQL datab
 ---
 
 ## Information
+
+> [!NOTE]
+> **App configuration has been tested on the following containers' versions:**
+> - `nginx:mainline-alpine-slim`
+> - `mysql:8.4.1`
+> - `php:8.3.22-fpm-alpine`
+> - `phpmyadmin:5.2.2`
 
 - MySQL and PHP are on the backend network because they only communicate with each other (PHP connects to MySQL)
 - Nginx acts as the frontend and needs access to PHP (backend) as well as to be exposed to the outside world
