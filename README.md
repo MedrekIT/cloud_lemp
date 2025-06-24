@@ -10,7 +10,6 @@ LEMP - web stack created for solutions written in PHP that support the MySQL dat
 
 - [Screenshots](#screenshots)
 - [Short info](#information)
-- [Information](#information)
 - [Installation](#installation)
 - [Usage](#usage)
 
