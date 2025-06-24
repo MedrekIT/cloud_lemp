@@ -1,0 +1,44 @@
+name: CI for Compose
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  test_compose:
+    name: Compose up and test (nginx and phpMyAdmin connection)
+    runs-on: ubuntu-latest
+      
+    steps:
+      - 
+        name: Check out the source repository
+        uses: actions/checkout@v4
+      
+      -
+        name: Set up Docker Compose
+        uses: docker/setup-compose-action@v1
+
+      -
+        name: Compose up
+        run: docker compose up -d --wait
+
+      -
+        name: Wait for containers to stabilize
+        run: sleep 5
+
+      -
+        name: Check nginx
+        run: curl --fail http://localhost:4001 || (docker compose logs && exit 1)
+
+      -
+        name: Check phpMyAdmin
+        run: curl --fail http://localhost:6001 || (docker compose logs && exit 1)
+
+      -
+        name: Show logs
+        run: docker compose logs
+
+      -
+        name: Clear up
+        if: always()
+        run: docker compose down -v
